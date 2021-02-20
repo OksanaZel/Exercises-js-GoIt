@@ -51,7 +51,7 @@
 //   return a > b ? b : a;
 // }
 
-// console.log(min(2, 2));
+// console.log(min(2, 3));
 
 // --------------------
 
@@ -86,23 +86,23 @@
 // (не меняя исходный массив)
 // не использовать Array.prototype.sort()
 
-const ex4 = [2, 65, 89];
+// const ex4 = [38, 44, 2, 89, 65];
 
-function bubbleSort(arr) {
-  for (let i = 0; i < arr.length; i++) {
-    console.log("1", arr[i]);
-    for (let j = 0; j < arr.length; j++) {
-      console.log("2", arr[j]);
-      if (arr[j] > arr[j + 1]) {
-        let tmp = arr[j];
-        arr[j] = arr[j + 1];
-        arr[j + 1] = tmp;
-      }
-    }
-  }
+// function bubbleSort(arr) {
+//   for (let i = 0; i < arr.length; i++) {
+//     console.log("1", arr[i]);
+//     for (let j = 0; j < arr.length; j++) {
+//       console.log("2", arr[j]);
+//       if (arr[j] > arr[j + 1]) {
+//         let tmp = arr[j];
+//         arr[j] = arr[j + 1];
+//         arr[j + 1] = tmp;
+//       }
+//     }
+//   }
 
-  return arr;
-}
+//   return arr;
+// }
 
 // console.log(bubbleSort(ex4));
 
@@ -113,19 +113,19 @@ function bubbleSort(arr) {
 // Напиши функцию findSmallestNumber(numbers)которая
 // ищет самое маленькое число в массиве.
 
-const ex5 = [104, 67, 54, 89, 2, 19];
+// const ex5 = [104, 67, 54, 89, 2, 19];
 
-function findSmallestNumber(arr) {
-  let min = arr[0];
+// function findSmallestNumber(arr) {
+//   let min = arr[0];
 
-  for (number of arr) {
-    if (min > number) {
-      min = number;
-    }
-  }
+//   for (number of arr) {
+//     if (min > number) {
+//       min = number;
+//     }
+//   }
 
-  return min;
-}
+//   return min;
+// }
 
 // console.log(findSmallestNumber(ex5));
 
@@ -138,21 +138,21 @@ function findSmallestNumber(arr) {
 // аргументов и возвращает их среднее значение.
 // Все аругменты будут только числами.
 
-function calculateAverage() {
-  const args = arguments;
-  let sum = 0;
-  let arrLength = 0;
-  for (arg of args) {
-    if (typeof arg !== "number") {
-      continue;
-    } else {
-      sum += arg;
-      arrLength++;
-    }
-  }
+// function calculateAverage() {
+//   const args = arguments;
+//   let sum = 0;
+//   let arrLength = 0;
+//   for (arg of args) {
+//     if (typeof arg !== "number") {
+//       continue;
+//     } else {
+//       sum += arg;
+//       arrLength++;
+//     }
+//   }
 
-  return sum / arrLength;
-}
+//   return sum / arrLength;
+// }
 
 // console.log(calculateAverage(1, 2, 3, 4, "number"));
 
@@ -168,21 +168,21 @@ function calculateAverage() {
 // пробелом (параметр string)
 // и возвращает самое длинное слово в этой строке.
 
-function findLongestWord(string) {
-  const splitedArr = string.split(" ");
-  let longest = splitedArr[0];
+// function findLongestWord(string) {
+//   const splitedArr = string.split(" ");
+//   let longest = splitedArr[0];
 
-  for (text of splitedArr) {
-    debugger;
-    if (text.length > longest.length) {
-      longest = text;
-    }
-  }
+//   for (text of splitedArr) {
+//     debugger;
+//     if (text.length > longest.length) {
+//       longest = text;
+//     }
+//   }
 
-  return longest;
-}
+//   return longest;
+// }
 
-findLongestWord("Всем привет, я Ашот");
+// findLongestWord("Всем привет, я Ашот");
 
 // ----------------------
 
@@ -193,9 +193,9 @@ findLongestWord("Всем привет, я Ашот");
 // и логировать строку «Привет, <имя>».
 // В случае отсутствующего аргумента выводить «Привет, гость»
 
-function greet(name) {
-  return name ? `Привет, ${name}` : "Привет, гость";
-}
+// function greet(name) {
+//   return name ? `Привет, ${name}` : "Привет, гость";
+// }
 
 // console.log(greet());
 
@@ -208,21 +208,21 @@ function greet(name) {
 // и определяет его наличие в масиве.
 // Аргумент должен быть строкой.
 
-const colors = ["red", "green", "blue"];
+// const colors = ["red", "green", "blue"];
 
-function findTheColor(colorName) {
-  if (typeof colorName !== "string") {
-    return "Допускается только строка";
-  }
+// function findTheColor(colorName) {
+//   if (typeof colorName !== "string") {
+//     return "Допускается только строка";
+//   }
 
-  if (colors.includes(colorName)) {
-    return "Цвет найден";
-  } else {
-    return "Цвет не найден";
-  }
-}
+//   if (colors.includes(colorName)) {
+//     return "Цвет найден";
+//   } else {
+//     return "Цвет не найден";
+//   }
+// }
 
-console.log(findTheColor(2));
+// console.log(findTheColor(2));
 
 // ----------------------
 
@@ -231,19 +231,19 @@ console.log(findTheColor(2));
 // Выполните рефакторинг заменив объявление
 // функции на стрелочную функцию.
 
-function checkNumbers(a, b) {
-  if (a > b) {
-    return `число ${a} больше ${b}`;
-  }
+// function checkNumbers(a, b) {
+//   if (a > b) {
+//     return `число ${a} больше ${b}`;
+//   }
 
-  return `число ${b} больше ${a}`;
-}
+//   return `число ${b} больше ${a}`;
+// }
 
-const checkNumbers2 = (a, b) => {
-  return a > b ? `число ${a} больше ${b}` : `число ${b} больше ${a}`;
-};
+// const checkNumbers2 = (a, b) => {
+//   return a > b ? `число ${a} больше ${b}` : `число ${b} больше ${a}`;
+// };
 
-console.log(checkNumbers2(1, 2));
+// console.log(checkNumbers2(1, 2));
 
 // ----------------------
 
@@ -252,13 +252,13 @@ console.log(checkNumbers2(1, 2));
 // Выполните рефакторинг заменив объявление
 // функции на стрелочную функцию.
 
-function mult(x, y, z) {
-  return x * y * z;
-}
+// function mult(x, y, z) {
+//   return x * y * z;
+// }
 
-const mult2 = (x, y, z) => x * y * z;
+// const mult2 = (x, y, z) => x * y * z;
 
-console.log(mult2(2, 3, 4));
+// console.log(mult2(2, 3, 4));
 
 // ----------------------
 
@@ -271,41 +271,41 @@ console.log(mult2(2, 3, 4));
 // 2. removeCourse(name) - удаляет курс из коллекции
 // 3. updateCourse(oldName, newName)- изменяет имя на новое
 
-const courses = ["HTML", "CSS", "JavaScript", "React"];
+// const courses = ["HTML", "CSS", "JavaScript", "React"];
 
-const addCourse = name => {
-  const x = courses.push(name);
-  console.log(x);
-  return courses;
-};
+// const addCourse = name => {
+//   const x = courses.push(name);
+//   console.log(x);
+//   return courses;
+// };
 
-console.log(addCourse("C++"));
+// console.log(addCourse("C++"));
 
-const removeCourse = name => {
-  const searchIndex = courses.indexOf(name);
-  console.log(searchIndex);
-  if (searchIndex !== -1) {
-    console.log(courses.splice(searchIndex, 1));
-    courses.splice(searchIndex, 1);
-  } else {
-    return "Данное значение не найдено";
-  }
+// const removeCourse = name => {
+//   const searchIndex = courses.indexOf(name);
+//   console.log(searchIndex);
+//   if (searchIndex !== -1) {
+//     console.log(courses.splice(searchIndex, 1));
+//     courses.splice(searchIndex, 1);
+//   } else {
+//     return "Данное значение не найдено";
+//   }
 
-  return courses;
-};
+//   return courses;
+// };
 
-console.log(removeCourse("Scala"));
+// console.log(removeCourse("Scala"));
 
-const updateCourse = (oldName, newName) => {
-  const searchIndex = courses.indexOf(oldName);
+// const updateCourse = (oldName, newName) => {
+//   const searchIndex = courses.indexOf(oldName);
 
-  if (searchIndex !== -1) {
-    courses.splice(searchIndex, 1, newName);
-  } else {
-    return "Данное значение не найдено";
-  }
+//   if (searchIndex !== -1) {
+//     courses.splice(searchIndex, 1, newName);
+//   } else {
+//     return "Данное значение не найдено";
+//   }
 
-  return courses;
-};
+//   return courses;
+// };
 
-console.log(updateCourse("JavaScript", "Typescript"));
+// console.log(updateCourse("JavaScript", "Typescript"));
