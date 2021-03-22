@@ -16,6 +16,13 @@
 // d. Классика, Рок-н-ролл
 // e.Рэп, Регги, Классика, Рок - н - ролл;
 
+const styles = ['Джаз', 'Блюз'];
+styles.push('Рок-н-ролл');
+styles.splice(1, 1, 'Классика');
+// console.log(styles.shift());
+styles.unshift('Рэп', 'Регги');
+// console.log(styles);
+
 // const styles = ["Джаз", "Блюз"];
 
 // styles.push("Рок-н-ролл");
@@ -43,6 +50,12 @@
 // Напишите функцию min(a,b), которая возвращает
 // меньшее из чисел a и b.
 
+const min = function (a, b) {
+    return a === b ? 'Цифры равны' : a > b ? b:a;
+}
+
+// console.log(min(2, 2));
+
 // function min(a, b) {
 //   if (a === b) {
 //     return "Цифры равны";
@@ -68,7 +81,16 @@
 // ['Mango', 'Poly', 'Ajax'] с индексом
 // 0 будет выведено 1 - Mango, а для индекса 2 выведет 3 - Ajax.
 
-// const x = ["Mango", "Poly", "Ajax"];
+
+const logItems = function (array) {
+    for (let i = 0; i < array.length; i += 1) {
+        console.log(`${i+1} - ${array[i]}`)
+    }
+}
+
+const x = ["Mango", "Poly", "Ajax"];
+
+// console.log(logItems(x));
 
 // function logItems(array) {
 //   for (let i = 0; i < array.length; i++) {
@@ -80,29 +102,30 @@
 
 // --------------------
 
+
 // Задача 4
 
 // Вернуть отсортированную копию по алфавиту
 // (не меняя исходный массив)
 // не использовать Array.prototype.sort()
 
-// const ex4 = [38, 44, 2, 89, 65];
+const ex4 = [38, 44, 2, 89, 65];
 
-// function bubbleSort(arr) {
-//   for (let i = 0; i < arr.length; i++) {
-//     console.log("1", arr[i]);
-//     for (let j = 0; j < arr.length; j++) {
-//       console.log("2", arr[j]);
-//       if (arr[j] > arr[j + 1]) {
-//         let tmp = arr[j];
-//         arr[j] = arr[j + 1];
-//         arr[j + 1] = tmp;
-//       }
-//     }
-//   }
+function bubbleSort(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    // console.log("1", arr[i]);
+    for (let j = 0; j < arr.length; j++) {
+      // console.log("2", arr[j]);
+      if (arr[j] > arr[j + 1]) {
+        let tmp = arr[j];
+        arr[j] = arr[j + 1];
+        arr[j + 1] = tmp;
+      }
+    }
+  }
 
-//   return arr;
-// }
+  return arr;
+}
 
 // console.log(bubbleSort(ex4));
 
@@ -113,20 +136,17 @@
 // Напиши функцию findSmallestNumber(numbers)которая
 // ищет самое маленькое число в массиве.
 
-// const ex5 = [104, 67, 54, 89, 2, 19];
-
-// function findSmallestNumber(arr) {
-//   let min = arr[0];
-
-//   for (number of arr) {
-//     if (min > number) {
-//       min = number;
-//     }
-//   }
-
-//   return min;
-// }
-
+const ex5 = [104, 67, 54, 89, 2, 19];
+ const findSmallestNumber = function (numbers) {
+   let biggest = numbers[0];
+   for (let i = 1; i < numbers.length; i++) {
+     if (biggest < numbers[i]) {
+       biggest = numbers[i];
+     }
+   }
+   return biggest;
+}
+ 
 // console.log(findSmallestNumber(ex5));
 
 // --------------------
@@ -137,6 +157,14 @@
 // которая принимает произвольное кол-во
 // аргументов и возвращает их среднее значение.
 // Все аругменты будут только числами.
+
+const calculateAverage = function () {
+  const arg = arguments;
+  let sum = 0;
+
+}
+
+
 
 // function calculateAverage() {
 //   const args = arguments;
@@ -309,3 +337,36 @@
 // };
 
 // console.log(updateCourse("JavaScript", "Typescript"));
+
+
+var collection = {
+  2548: {
+    albumTitle: 'Slippery When Wet',
+    artist: 'Bon Jovi',
+    tracks: ['Let It Rock', 'You Give Love a Bad Name']
+  },
+  2468: {
+    albumTitle: '1999',
+    artist: 'Prince',
+    tracks: ['1999', 'Little Red Corvette']
+  },
+  1245: {
+    artist: 'Robert Palmer',
+    tracks: []
+  },
+  5439: {
+    albumTitle: 'ABBA Gold'
+  }
+};
+
+function updateRecords(object, id, prop, value) {
+  return object;
+  if (object.hasOwnProperty(prop)) {
+    
+  }
+  
+}
+
+console.log(updateRecords(collection, 5439, 'artist', 'ABBA'));
+/*Если prop не является дорожками, а значение не является пустой строкой, 
+обновите или установите для свойства этого альбома значение value. */
