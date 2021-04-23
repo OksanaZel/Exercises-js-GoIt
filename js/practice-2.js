@@ -367,6 +367,6 @@ function updateRecords(object, id, prop, value) {
   
 }
 
-console.log(updateRecords(collection, 5439, 'artist', 'ABBA'));
+// console.log(updateRecords(collection, 5439, 'artist', 'ABBA'));
 /*Если prop не является дорожками, а значение не является пустой строкой, 
 обновите или установите для свойства этого альбома значение value. */

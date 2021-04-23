@@ -102,6 +102,9 @@ const users = [
 ];
 
 const min = users.filter(user => user.age >= 18).sort((a, b) => a.age - b.age);
+const result = min[0].sex === "male" ? `${min[0].name} самый молодой и ему ${min[0].age} лет` :
+  `${min[0].name} самый молодой и ей ${min[0].age} лет`
+console.log(result);
 
 
 
